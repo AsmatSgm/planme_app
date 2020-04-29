@@ -54,7 +54,7 @@ body {
     width: 60px;
     height: 40px;
     margin: 10px 10px 10px 0;
-    background-color: #f7b71d;
+    background-color: #03ba9e;
     color: white;
     border: none;
     border-radius: 0 15px 15px 0;
@@ -64,7 +64,7 @@ body {
     transition: all 0.2s ease-in-out;
 }
 .add:hover {
-    background-color: #ffa600;
+    background-color: #0c9463;
 }
 .list {
     width: 100%;
