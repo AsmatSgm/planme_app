@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #2F4F4F;/*03ba9e*/
+    height: 100vh;
+    display: flex;
+    justify-content: center;/*ตรงกลางบรรทัด*/
+    align-items: center; /*ตรงกลางหน้า*/
+    font-family: 'Poppins', sans-serif;
+}
+.container {
+    width: 250px;
+    height: 400px;
+    background-color: white;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0px 30px 55px 2px rgba(0,0,0,0.46);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    cursor: default;
+}
+.title {
+    width: 100%;
+    height: 25%; 
+    background: url(background.jpg);
+    background-position: center;/*เพิ่ม*/
+    background-size: cover;/*เพิ่ม*/
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.addSection {
+    width: 100%;
+    height: 15%;
+    display: flex;
+    border-bottom: 1px solid #dbdbdb;
+}
+.taskInput {
+    margin: 10px 0 10px 10px; 
+    padding: 10px;
+    width: 180px;
+    height: 40px;
+    border-radius: 15px 0 0 15px; /*บน ขวา ล่าง ซ้าย (ตามเข็มนาฬิกา)*/
+    border: 1px solid #dbdbdb;
+    border-right: none;
+    outline: none;
+}
+.add {
+    width: 60px;
+    height: 40px;
+    margin: 10px 10px 10px 0;
+    background-color: #f7b71d;
+    color: white;
+    border: none;
+    border-radius: 0 15px 15px 0;
+    outline: none;
+    font-weight: bold;
+    cursor: pointer; /*รูปแบบเมาส์ (มือ)*/
+    transition: all 0.2s ease-in-out;
+}
+.add:hover {
+    background-color: #ffa600;
+}
+.list {
+    width: 100%;
+    height: 60%;
+    padding: 0 10px 10px 10px;
+    overflow: auto;
+}
+
+/* DOM Elements */
+.taskContainer {
+    border-bottom: 1px solid #dbdbdb;
+    padding: 5px 0 5px 0;
+    display: flex; /*ให้อยู่บรรทัดเดียวกัน*/
+    justify-content: space-between;/*ชิดมุม*/
+    align-items: center;
+}
+.task {
+    width: 170px;
+}
+i.fas.fa-check, i.fas.fa-trash-alt {
+    opacity: 0; /*โปร่ง ทึบ*/
+    cursor: pointer;
+    transition: all 0.1s ease-in-out;
+}
+i.fas.fa-check:hover { /*เมื่อชี้*/
+    color: #0c9463;
+}
+i.fas.fa-trash-alt:hover {
+    color: #ff0000;
+}
+i.fas.fa-check:active { /*เมื่อคลิ๊ก*/
+    transform: translateY(3px);/*ขยับเครื่องหมายถูกลงล่างเล็กน้อย*/
+}
+i.fas.fa-trash-alt:active {
+    transform: translateY(3px);
+}
+.taskContainer:hover i.fas.fa-check, .taskContainer:hover i.fas.fa-trash-alt {
+    opacity: 1;
+}
+
+
